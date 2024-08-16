@@ -1,5 +1,5 @@
 {% set name = "nrel-rex" %}
-{% set version = "0.2.84" %}
+{% set version = "0.2.89" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/NREL/rex/archive/v{{ version }}.tar.gz
-  sha256: 3f6c01fa3c9c199eac273d29ca8c0e718945bd2c70626ed044e1b04ec786380d
+  sha256: 5cbf900ff56a39438fe207d31c2aa5a6bd5af30ca958140f3c8edb1ee9ead595
 
 build:
   entry_points:
