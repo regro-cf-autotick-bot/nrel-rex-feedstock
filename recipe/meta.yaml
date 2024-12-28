@@ -23,14 +23,14 @@ build:
     - wind-rose=rex.joint_pd.wind_rose_cli:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - click >=7.0
     - h5py >=2.10.0,!=3.0.0
     - h5pyd >=0.7.0
@@ -58,6 +58,7 @@ test:
     - temporal-stats --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://nrel.github.io/rex/
